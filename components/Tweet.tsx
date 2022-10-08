@@ -30,9 +30,7 @@ const Tweet = ({ tweet }: Props) => {
     refreshComments();
   }, []);
 
-  const handleSubmit = async (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const commentToast = toast.loading("Posting Comment...");
